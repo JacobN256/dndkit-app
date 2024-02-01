@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Row from "./components/Row";
+
+const rowData = [
+  {
+    time: 1,
+    name: "Jacob",
+  },
+  {
+    time: 3,
+    name: "Michelangelo",
+  },
+  {
+    time: 5,
+    name: "Raphael",
+  },
+  {
+    time: 8,
+    name: "Splinter",
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>PoC</h1>
+      {/* For top value, the row height is set as w-12 or 48px currently. For multiple rows, we must pass in */}
+      <Row data={rowData} stackNumber={0}></Row>
+      <Row data={rowData} stackNumber={1}></Row>
+      <Row data={rowData} stackNumber={2}></Row>
+    </>
   );
 }
 

@@ -1,0 +1,1 @@
+export const TICK_WIDTH = 4.1666667; // 100/24;
